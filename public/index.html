@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Endo - Page d'accueil</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cabinet Endo</h1>
+        <div id="date-time"></div>
+        <div class="button-group">
+            <a href="/dentist1.html" class="button">Interface Dentiste 1</a>
+            <a href="/dentist2.html" class="button">Interface Dentiste 2</a>
+            <a href="/secretary.html" class="button">Interface Secrétaire</a>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('date-time').textContent = `${dateString} - ${timeString}`;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
